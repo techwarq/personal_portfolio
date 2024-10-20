@@ -24,21 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const backgroundImageStyle = {
-    backgroundImage: "url('/space.jpg')",
+    backgroundImage: "url('space.jpg')",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     backgroundPosition: "center",
   };
-  const backdropFilterStyle = {
-    backdropFilter: "blur(1px)", // Adjust the blur amount as needed
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Optional: Adjust the background color and opacity
-  };
+ 
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ ...backgroundImageStyle, ...backdropFilterStyle }}
+        style={{ ...backgroundImageStyle,}}
       >
         <div className="min-h-screen font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6 ">
           {children}
